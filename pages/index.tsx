@@ -11,7 +11,8 @@ const HomePage = () => {
     <div>
       <h1>Data Visualizations</h1>
       <ul>
-        <li>{linkJsx("D3", "/d3")}</li>
+        <li>{linkJsx("D3.js", "/d3js")}</li>
+        <li>{linkJsx("Chart.js", "/chartjs")}</li>
       </ul>
     </div>
   );
