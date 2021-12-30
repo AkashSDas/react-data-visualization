@@ -86,7 +86,27 @@ const BarChart = () => {
 
   return (
     <div style={{ height: "600px", width: "600px" }}>
-      <Bar data={dataset} options={{ animation: { duration: 300 } }} redraw />
+      <Bar
+        data={dataset}
+        options={{
+          animation: { duration: 300 },
+          plugins: {
+            tooltip: {
+              backgroundColor: "#212324",
+              boxWidth: 40,
+              boxPadding: 32,
+              bodyFont: { size: 32 },
+              titleFont: { size: 20 },
+              callbacks: {
+                label: (context) => {
+                  return context.dataset.label ? `\$${context.parsed.y}` : "";
+                },
+              },
+            },
+          },
+        }}
+        redraw
+      />
       <button
         onClick={() => {
           setXCount((count) => count + 1);
