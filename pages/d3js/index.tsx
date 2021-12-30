@@ -346,6 +346,7 @@ const StarCoodinatesInfo = () => {
       </button>
       <button
         onClick={() => {
+          setXCount((count) => count - 1);
           let tmpData = [...data];
           tmpData.splice(-1);
           setData([...tmpData]);
